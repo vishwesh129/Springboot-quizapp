@@ -16,5 +16,4 @@ public interface QuestionDao extends JpaRepository<Question, Long>{
 	@Query(value = "SELECT * FROM question q Where q.category=:category ORDER BY RANDOM() LIMIT :numQ" , nativeQuery = true)
 	List<Question> findRandomQuestionsByCategory(String category, int numQ);
 	
-	
 }
